@@ -8,9 +8,14 @@ RUN echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-o
 
 RUN apt-get update
 
+RUN mkdir -p /data/db
+
 RUN apt-get install -y mongodb-org
 
 RUN pip3 install pymongo
+
+ADD init.d-mongod /etc/init.d/mongod
+RUN chmod u+x /etc/init.d/mongod
 
 ADD run.sh /tmp/run.sh
 RUN chmod u+x /tmp/run.sh
