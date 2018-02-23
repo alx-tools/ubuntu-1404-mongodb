@@ -1,4 +1,4 @@
-# Container for developing in NodeJS 0.10 at Holberton School
+# Container for developing in MongoDb and Python 3 at Holberton School
 
 FROM holbertonschool/ubuntu-1404-python3
 MAINTAINER Guillaume Salva <guillaume@holbertonschool.com>
