@@ -3,6 +3,6 @@
 rm -rf /tmp/run.sh;
 rm -rf /root/.bash_history;
 
-service mongodb start;
+service mongod start;
 
 /usr/sbin/sshd -D
