@@ -1,5 +1,4 @@
 # Container for developing in MongoDb and Python 3 at Holberton School
-
 FROM holbertonschool/ubuntu-1404-python3
 MAINTAINER Guillaume Salva <guillaume@holbertonschool.com>
 
@@ -17,8 +16,8 @@ RUN pip3 install pymongo
 ADD init.d-mongod /etc/init.d/mongod
 RUN chmod u+x /etc/init.d/mongod
 
-ADD run.sh /tmp/run.sh
-RUN chmod u+x /tmp/run.sh
+ADD run.sh /etc/sandbox_run.sh
+RUN chmod u+x /etc/sandbox_run.sh
 
 # start run!
-CMD ["./tmp/run.sh"]
+CMD ["./etc/sandbox_run.sh"]
