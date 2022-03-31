@@ -11,7 +11,7 @@ RUN mkdir -p /data/db
 
 RUN apt-get install -y mongodb-org
 
-RUN pip3 install pymongo
+RUN pip3 install pymongo==3.12.3
 
 ADD init.d-mongod /etc/init.d/mongod
 RUN chmod u+x /etc/init.d/mongod
